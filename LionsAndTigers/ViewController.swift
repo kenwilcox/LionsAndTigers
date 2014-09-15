@@ -26,9 +26,9 @@ class ViewController: UIViewController {
     myTiger.image = UIImage(named:"BengalTiger.jpg")
     
     imageView.image = myTiger.image
-    nameLabel.text = myTiger.name
-    ageLabel.text = "\(myTiger.age)"
-    breedLabel.text = myTiger.breed
+    nameLabel.text = "Name: \(myTiger.name)"
+    ageLabel.text = "Age: \(myTiger.age)"
+    breedLabel.text = "Breed: \(myTiger.breed)"
     
     var secondTiger = Tiger()
     secondTiger.name = "Tigress"
