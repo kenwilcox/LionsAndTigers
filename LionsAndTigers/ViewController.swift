@@ -17,6 +17,13 @@ class ViewController: UIViewController {
   
   var myTigers:[Tiger] = []
   
+  func displayTiger(tiger:Tiger) {
+    imageView.image = tiger.image
+    nameLabel.text = "Name: \(tiger.name)"
+    ageLabel.text = "Age: \(tiger.age)"
+    breedLabel.text = "Breed: \(tiger.breed)"
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
@@ -29,10 +36,7 @@ class ViewController: UIViewController {
     
     myTigers.append(myTiger)
     
-    imageView.image = myTiger.image
-    nameLabel.text = "Name: \(myTiger.name)"
-    ageLabel.text = "Age: \(myTiger.age)"
-    breedLabel.text = "Breed: \(myTiger.breed)"
+    displayTiger(myTiger)
     
     var secondTiger = Tiger()
     secondTiger.name = "Tigress"
@@ -53,7 +57,7 @@ class ViewController: UIViewController {
     fourthTiger.image = UIImage(named:"SiberianTiger.jpg")
     
     myTigers += [secondTiger, thirdTiger, fourthTiger]
-    println("\(myTigers)")
+
   }
 
   override func didReceiveMemoryWarning() {
@@ -63,7 +67,9 @@ class ViewController: UIViewController {
 
 
   @IBAction func nextButtonPressed(sender: UIBarButtonItem) {
-    println("Next Button Pressed")
+    let randomIndex = Int(arc4random_uniform(UInt32(myTigers.count)))
+    let tiger = myTigers[randomIndex]
+    displayTiger(tiger)
   }
 }
 
