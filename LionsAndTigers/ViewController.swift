@@ -17,11 +17,37 @@ class ViewController: UIViewController {
   
   var myTigers:[Tiger] = []
   
-  func displayTiger(tiger:Tiger) {
-    imageView.image = tiger.image
-    nameLabel.text = "Name: \(tiger.name)"
-    ageLabel.text = "Age: \(tiger.age)"
-    breedLabel.text = "Breed: \(tiger.breed)"
+  func randomTransition() -> UIViewAnimationOptions {
+    var ret = UIViewAnimationOptions.TransitionCrossDissolve
+/*    
+    UIViewAnimationOptionTransitionFlipFromLeft    = 1 << 20,
+    UIViewAnimationOptionTransitionFlipFromRight   = 2 << 20,
+    UIViewAnimationOptionTransitionCurlUp          = 3 << 20,
+    UIViewAnimationOptionTransitionCurlDown        = 4 << 20,
+    UIViewAnimationOptionTransitionCrossDissolve   = 5 << 20,
+    UIViewAnimationOptionTransitionFlipFromTop     = 6 << 20,
+    UIViewAnimationOptionTransitionFlipFromBottom  = 7 << 20,
+*/
+    
+    return UIViewAnimationOptions.TransitionCrossDissolve
+  }
+  
+  func displayTiger(tiger:Tiger, withTransition: Bool) {
+    if (withTransition) {
+      UIView.transitionWithView(self.view, duration: 1, options: randomTransition(), animations: {
+        self.imageView.image = tiger.image
+        self.nameLabel.text = tiger.name
+        self.ageLabel.text = "\(tiger.age)"
+        self.breedLabel.text = tiger.breed
+        }, completion: { (finished: Bool) -> () in
+      })
+    }
+    else {
+      imageView.image = tiger.image
+      nameLabel.text = "Name: \(tiger.name)"
+      ageLabel.text = "Age: \(tiger.age)"
+      breedLabel.text = "Breed: \(tiger.breed)"
+    }
   }
   
   override func viewDidLoad() {
@@ -36,7 +62,7 @@ class ViewController: UIViewController {
     
     myTigers.append(myTiger)
     
-    displayTiger(myTiger)
+    displayTiger(myTiger, withTransition: false)
     
     var secondTiger = Tiger()
     secondTiger.name = "Tigress"
@@ -69,7 +95,7 @@ class ViewController: UIViewController {
   @IBAction func nextButtonPressed(sender: UIBarButtonItem) {
     let randomIndex = Int(arc4random_uniform(UInt32(myTigers.count)))
     let tiger = myTigers[randomIndex]
-    displayTiger(tiger)
+    displayTiger(tiger, withTransition: true)
   }
 }
 
