@@ -15,6 +15,8 @@ class ViewController: UIViewController {
   @IBOutlet weak var ageLabel: UILabel!
   @IBOutlet weak var breedLabel: UILabel!
   
+  var myTigers:[Tiger] = []
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
@@ -24,6 +26,8 @@ class ViewController: UIViewController {
     myTiger.breed = "Bengal Tiger"
     myTiger.age = 3
     myTiger.image = UIImage(named:"BengalTiger.jpg")
+    
+    myTigers.append(myTiger)
     
     imageView.image = myTiger.image
     nameLabel.text = "Name: \(myTiger.name)"
@@ -47,6 +51,9 @@ class ViewController: UIViewController {
     fourthTiger.breed = "Siberian Tiger"
     fourthTiger.age = 5
     fourthTiger.image = UIImage(named:"SiberianTiger.jpg")
+    
+    myTigers += [secondTiger, thirdTiger, fourthTiger]
+    println("\(myTigers)")
   }
 
   override func didReceiveMemoryWarning() {
