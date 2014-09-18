@@ -19,17 +19,23 @@ class ViewController: UIViewController {
   
   func randomTransition() -> UIViewAnimationOptions {
     var ret = UIViewAnimationOptions.TransitionCrossDissolve
-/*    
-    UIViewAnimationOptionTransitionFlipFromLeft    = 1 << 20,
-    UIViewAnimationOptionTransitionFlipFromRight   = 2 << 20,
-    UIViewAnimationOptionTransitionCurlUp          = 3 << 20,
-    UIViewAnimationOptionTransitionCurlDown        = 4 << 20,
-    UIViewAnimationOptionTransitionCrossDissolve   = 5 << 20,
-    UIViewAnimationOptionTransitionFlipFromTop     = 6 << 20,
-    UIViewAnimationOptionTransitionFlipFromBottom  = 7 << 20,
-*/
     
-    return UIViewAnimationOptions.TransitionCrossDissolve
+    // Several different transitions are rather jaring
+    
+//    let random = Int(arc4random_uniform(UInt32(7)))
+//    
+//    switch(random) {
+//    case 0: ret = UIViewAnimationOptions.TransitionFlipFromLeft
+//    case 1: ret = UIViewAnimationOptions.TransitionFlipFromRight
+//    case 2: ret = UIViewAnimationOptions.TransitionCurlUp
+//    case 3: ret = UIViewAnimationOptions.TransitionCurlDown
+//    case 4: ret = UIViewAnimationOptions.TransitionCrossDissolve
+//    case 5: ret = UIViewAnimationOptions.TransitionFlipFromTop
+//    case 6: ret = UIViewAnimationOptions.TransitionFlipFromBottom
+//    default: println("Default Called \(random)"); ret = UIViewAnimationOptions.TransitionCrossDissolve
+//    }
+    
+    return ret
   }
   
   func displayTiger(tiger:Tiger, withTransition: Bool) {
