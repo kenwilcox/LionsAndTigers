@@ -16,6 +16,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var breedLabel: UILabel!
   
   var myTigers:[Tiger] = []
+  var currentIndex = 0
   
   func randomTransition() -> UIViewAnimationOptions {
     var ret = UIViewAnimationOptions.TransitionCrossDissolve
@@ -99,7 +100,12 @@ class ViewController: UIViewController {
 
 
   @IBAction func nextButtonPressed(sender: UIBarButtonItem) {
-    let randomIndex = Int(arc4random_uniform(UInt32(myTigers.count)))
+    var randomIndex: Int
+    do {
+      randomIndex = Int(arc4random_uniform(UInt32(myTigers.count)))
+    } while currentIndex == randomIndex
+    currentIndex = randomIndex
+    
     let tiger = myTigers[randomIndex]
     displayTiger(tiger, withTransition: true)
   }
