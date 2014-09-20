@@ -19,4 +19,10 @@ struct Tiger {
     println("\(name): Chuff Chuff")
   }
   
+  func chuffANumberOfTimes (numberOfTimes:Int) {
+    for var chuff = 0; chuff < numberOfTimes; ++chuff {
+      self.chuff()
+    }
+  }
+  
 }
