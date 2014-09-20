@@ -43,17 +43,17 @@ class ViewController: UIViewController {
     if (withTransition) {
       UIView.transitionWithView(self.view, duration: 1, options: randomTransition(), animations: {
         self.imageView.image = tiger.image
-        self.nameLabel.text = tiger.name
-        self.ageLabel.text = "\(tiger.age)"
-        self.breedLabel.text = tiger.breed
+        self.nameLabel.text = "Name: \(tiger.name)"
+        self.ageLabel.text = "Age: \(tiger.age)"
+        self.breedLabel.text = "Breed: \(tiger.breed)"
         }, completion: { (finished: Bool) -> () in
       })
     }
     else {
-      imageView.image = tiger.image
-      nameLabel.text = "Name: \(tiger.name)"
-      ageLabel.text = "Age: \(tiger.age)"
-      breedLabel.text = "Breed: \(tiger.breed)"
+      self.imageView.image = tiger.image
+      self.nameLabel.text = "Name: \(tiger.name)"
+      self.ageLabel.text = "Age: \(tiger.age)"
+      self.breedLabel.text = "Breed: \(tiger.breed)"
     }
   }
   
@@ -109,6 +109,8 @@ class ViewController: UIViewController {
     let tiger = myTigers[randomIndex]
     displayTiger(tiger, withTransition: true)
     tiger.chuffANumberOfTimes(1)
+//    println(tiger.ageInTigerYearsFromAge(nil))
+    
   }
 }
 

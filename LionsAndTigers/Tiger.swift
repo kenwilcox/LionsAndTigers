@@ -35,4 +35,12 @@ struct Tiger {
       }
     }
   }
+  
+  func ageInTigerYearsFromAge(regularAge:Int?) -> Int {
+    var ret = self.age;
+    if let age = regularAge {
+      ret = age
+    }
+    return ret * 3
+  }
 }
