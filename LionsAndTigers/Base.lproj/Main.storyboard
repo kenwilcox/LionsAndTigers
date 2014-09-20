@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6246" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6246" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6239"/>
     </dependencies>
@@ -38,32 +38,38 @@
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000016" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRm-AY-0M5">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.8492697011" green="0.8492697011" blue="0.8492697011" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="419" width="171" height="21"/>
+                                    <rect key="frame" x="16" y="373" width="171" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000016" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="age" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28c-nn-YpJ">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.8492697011" green="0.8492697011" blue="0.8492697011" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="448" width="171" height="21"/>
+                                    <rect key="frame" x="16" y="402" width="171" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000016" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="breed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOh-GK-6e0">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.8492697011" green="0.8492697011" blue="0.8492697011" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="477" width="171" height="21"/>
+                                    <rect key="frame" x="16" y="431" width="171" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fact" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oij-Gy-ba3">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <color key="backgroundColor" red="0.84926970108695654" green="0.84926970108695654" blue="0.84926970108695654" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="460" width="288" height="53"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -75,6 +81,7 @@
                                 <exclude reference="VRm-AY-0M5"/>
                                 <exclude reference="28c-nn-YpJ"/>
                                 <exclude reference="DOh-GK-6e0"/>
+                                <exclude reference="Oij-Gy-ba3"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -84,6 +91,7 @@
                                 <include reference="VRm-AY-0M5"/>
                                 <include reference="28c-nn-YpJ"/>
                                 <include reference="DOh-GK-6e0"/>
+                                <include reference="Oij-Gy-ba3"/>
                             </mask>
                         </variation>
                     </view>
@@ -91,6 +99,7 @@
                     <connections>
                         <outlet property="ageLabel" destination="28c-nn-YpJ" id="jQj-uR-Uc3"/>
                         <outlet property="breedLabel" destination="DOh-GK-6e0" id="Qqb-L1-7v1"/>
+                        <outlet property="factLabel" destination="Oij-Gy-ba3" id="EfP-6r-11a"/>
                         <outlet property="imageView" destination="EBt-tz-NNo" id="Tag-qV-5oI"/>
                         <outlet property="nameLabel" destination="VRm-AY-0M5" id="Jw4-Pj-oDz"/>
                     </connections>
