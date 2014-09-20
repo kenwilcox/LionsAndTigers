@@ -108,7 +108,7 @@ class ViewController: UIViewController {
     
     let tiger = myTigers[randomIndex]
     displayTiger(tiger, withTransition: true)
-    tiger.chuffANumberOfTimes(3)
+    tiger.chuffANumberOfTimes(1)
   }
 }
 
