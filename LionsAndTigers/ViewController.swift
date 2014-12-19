@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+  
   @IBOutlet weak var imageView: UIImageView!
   @IBOutlet weak var nameLabel: UILabel!
   @IBOutlet weak var ageLabel: UILabel!
@@ -24,18 +24,18 @@ class ViewController: UIViewController {
     
     // Several different transitions are rather jaring
     
-//    let random = Int(arc4random_uniform(UInt32(7)))
-//    
-//    switch(random) {
-//    case 0: ret = UIViewAnimationOptions.TransitionFlipFromLeft
-//    case 1: ret = UIViewAnimationOptions.TransitionFlipFromRight
-//    case 2: ret = UIViewAnimationOptions.TransitionCurlUp
-//    case 3: ret = UIViewAnimationOptions.TransitionCurlDown
-//    case 4: ret = UIViewAnimationOptions.TransitionCrossDissolve
-//    case 5: ret = UIViewAnimationOptions.TransitionFlipFromTop
-//    case 6: ret = UIViewAnimationOptions.TransitionFlipFromBottom
-//    default: println("Default Called \(random)"); ret = UIViewAnimationOptions.TransitionCrossDissolve
-//    }
+    //    let random = Int(arc4random_uniform(UInt32(7)))
+    //
+    //    switch(random) {
+    //    case 0: ret = UIViewAnimationOptions.TransitionFlipFromLeft
+    //    case 1: ret = UIViewAnimationOptions.TransitionFlipFromRight
+    //    case 2: ret = UIViewAnimationOptions.TransitionCurlUp
+    //    case 3: ret = UIViewAnimationOptions.TransitionCurlDown
+    //    case 4: ret = UIViewAnimationOptions.TransitionCrossDissolve
+    //    case 5: ret = UIViewAnimationOptions.TransitionFlipFromTop
+    //    case 6: ret = UIViewAnimationOptions.TransitionFlipFromBottom
+    //    default: println("Default Called \(random)"); ret = UIViewAnimationOptions.TransitionCrossDissolve
+    //    }
     
     return ret
   }
@@ -93,15 +93,15 @@ class ViewController: UIViewController {
     fourthTiger.image = UIImage(named:"SiberianTiger.jpg")
     
     myTigers += [secondTiger, thirdTiger, fourthTiger]
-
+    
   }
-
+  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-
-
+  
+  
   @IBAction func nextButtonPressed(sender: UIBarButtonItem) {
     var randomIndex: Int
     do {
@@ -112,7 +112,7 @@ class ViewController: UIViewController {
     let tiger = myTigers[randomIndex]
     displayTiger(tiger, withTransition: true)
     tiger.chuffANumberOfTimes(1)
-//    println(tiger.ageInTigerYearsFromAge(nil))
+    //    println(tiger.ageInTigerYearsFromAge(nil))
     
   }
 }
