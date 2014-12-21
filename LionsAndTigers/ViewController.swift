@@ -110,17 +110,20 @@ class ViewController: UIViewController {
   }
   
   func updateAnimal() {
+    var animal = "Tiger"
+    var randomIndex = 0
+    
     switch(self.currentAnimal) {
     case ("Tiger", _):
-      let randomIndex = Int(arc4random_uniform(UInt32(lions.count)))
-      self.currentAnimal = ("Lion", randomIndex)
+      randomIndex = Int(arc4random_uniform(UInt32(lions.count)))
+      animal = "Lion"
     case ("Lion", _):
-      let randomIndex = Int(arc4random_uniform(UInt32(lionCubs.count)))
-      self.currentAnimal = ("LionCub", randomIndex)
+      randomIndex = Int(arc4random_uniform(UInt32(lionCubs.count)))
+      animal = "LionCub"
     default:
-      let randomIndex = Int(arc4random_uniform(UInt32(myTigers.count)))
-      self.currentAnimal = ("Tiger", randomIndex)
+      randomIndex = Int(arc4random_uniform(UInt32(myTigers.count)))
     }
+    self.currentAnimal = ("Lion", randomIndex)
   }
   
   func updateView() {
