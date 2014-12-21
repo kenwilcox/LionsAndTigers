@@ -20,7 +20,6 @@ class ViewController: UIViewController {
   var lions:[Lion] = []
   var lionCubs:[LionCub] = []
   
-  var currentIndex = 0
   var currentAnimal = (species: "Tiger", index: 0)
   
   override func viewDidLoad() {
@@ -33,7 +32,7 @@ class ViewController: UIViewController {
     myTiger.age = 3
     myTiger.image = UIImage(named:"BengalTiger.jpg")
     
-    myTigers.append(myTiger)
+    self.myTigers.append(myTiger)
     
     updateView()
     
@@ -55,16 +54,16 @@ class ViewController: UIViewController {
     fourthTiger.age = 5
     fourthTiger.image = UIImage(named:"SiberianTiger.jpg")
     
-    myTigers += [secondTiger, thirdTiger, fourthTiger]
+    self.myTigers += [secondTiger, thirdTiger, fourthTiger]
     
-    var lion = Lion()
+    let lion = Lion()
     lion.age = 4
     lion.isAlphaMale = false
     lion.image = UIImage(named: "Lion.jpg")
     lion.name = "Mufasa"
     lion.subspecies = "West African"
     
-    var lioness = Lion()
+    let lioness = Lion()
     lioness.age = 3
     lioness.isAlphaMale = false
     lioness.image = UIImage(named: "Lioness.jpg")
@@ -77,9 +76,9 @@ class ViewController: UIViewController {
     lion.changeToAlphaMale()
     println(lion.isAlphaMale)
     
-    lions += [lion, lioness]
+    self.lions += [lion, lioness]
     
-    var lionCub = LionCub()
+    let lionCub = LionCub()
     lionCub.age = 1
     lionCub.name = "Simba"
     lionCub.image = UIImage(named: "LionCub1.jpg")
@@ -88,14 +87,14 @@ class ViewController: UIViewController {
     lionCub.roar()
     lionCub.rubLionCubsBelly()
     
-    var femaleLionCub = LionCub()
+    let femaleLionCub = LionCub()
     femaleLionCub.age = 1
     femaleLionCub.name = "Nala"
     femaleLionCub.image = UIImage(named: "LionCub2.jpg")
     femaleLionCub.subspecies = "Transvaal"
     femaleLionCub.isAlphaMale = false
     
-    lionCubs += [lionCub, femaleLionCub]
+    self.lionCubs += [lionCub, femaleLionCub]
     
   }
   
@@ -110,13 +109,13 @@ class ViewController: UIViewController {
   }
   
   func updateAnimal() {
-    switch(currentAnimal) {
+    switch(self.currentAnimal) {
     case ("Tiger", _):
       let randomIndex = Int(arc4random_uniform(UInt32(lions.count)))
-      currentAnimal = ("Lion", randomIndex)
+      self.currentAnimal = ("Lion", randomIndex)
     default:
       let randomIndex = Int(arc4random_uniform(UInt32(myTigers.count)))
-      currentAnimal = ("Tiger", randomIndex)
+      self.currentAnimal = ("Tiger", randomIndex)
     }
   }
   
