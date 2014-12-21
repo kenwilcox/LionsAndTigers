@@ -17,6 +17,8 @@ class ViewController: UIViewController {
   @IBOutlet weak var factLabel: UILabel!
   
   var myTigers:[Tiger] = []
+  var lions:[Lion] = []
+  
   var currentIndex = 0
   
   func randomTransition() -> UIViewAnimationOptions {
@@ -107,6 +109,8 @@ class ViewController: UIViewController {
     lioness.image = UIImage(named: "Lioness.jpg")
     lioness.name = "Sarabi"
     lioness.subspecies = "Barbary"
+    
+    lions += [lion, lioness]
     
   }
   
