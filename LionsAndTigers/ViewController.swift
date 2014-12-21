@@ -119,7 +119,7 @@ class ViewController: UIViewController {
         self.breedLabel.text = lion.subspecies
         self.ageLabel.text = "\(lion.age)"
         self.nameLabel.text = lion.name
-        self.factLabel.text = ""
+        self.factLabel.text = lion.randomFact()
       
       }
       
