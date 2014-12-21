@@ -22,6 +22,7 @@
 		BE26C87C19C72E2800FC74C1 /* Lioness.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE26C87419C72E2800FC74C1 /* Lioness.jpg */; };
 		BE26C87D19C72E2800FC74C1 /* MalayanTiger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE26C87519C72E2800FC74C1 /* MalayanTiger.jpg */; };
 		BE26C87E19C72E2800FC74C1 /* SiberianTiger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE26C87619C72E2800FC74C1 /* SiberianTiger.jpg */; };
+		BEE7AB3A1A467A850023B4EF /* Lion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE7AB391A467A850023B4EF /* Lion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		BE26C87419C72E2800FC74C1 /* Lioness.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lioness.jpg; sourceTree = "<group>"; };
 		BE26C87519C72E2800FC74C1 /* MalayanTiger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MalayanTiger.jpg; sourceTree = "<group>"; };
 		BE26C87619C72E2800FC74C1 /* SiberianTiger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SiberianTiger.jpg; sourceTree = "<group>"; };
+		BEE7AB391A467A850023B4EF /* Lion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				BE26C86C19C72AD100FC74C1 /* Tiger.swift */,
+				BEE7AB391A467A850023B4EF /* Lion.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				BE26C84D19C7283300FC74C1 /* ViewController.swift in Sources */,
 				BE26C86D19C72AD100FC74C1 /* Tiger.swift in Sources */,
 				BE26C84B19C7283300FC74C1 /* AppDelegate.swift in Sources */,
+				BEE7AB3A1A467A850023B4EF /* Lion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +463,7 @@
 				BE26C86619C7283300FC74C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE26C86719C7283300FC74C1 /* Build configuration list for PBXNativeTarget "LionsAndTigersTests" */ = {
 			isa = XCConfigurationList;
@@ -467,6 +472,7 @@
 				BE26C86919C7283300FC74C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
