@@ -9,5 +9,7 @@
 import Foundation
 
 class LionCub: Lion {
-  
+  func rubLionCubsBelly() {
+    println("LionCub: Snuggle and be happy")
+  }
 }
