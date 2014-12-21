@@ -98,20 +98,26 @@ class ViewController: UIViewController {
   func updateView() {
     UIView.transitionWithView(self.view, duration: 1, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
       if self.currentAnimal.species == "Tiger" {
+        
         let tiger = self.myTigers[self.currentAnimal.index]
         self.imageView.image = tiger.image
         self.nameLabel.text = "Name: \(tiger.name)"
         self.ageLabel.text = "Age: \(tiger.age)"
         self.breedLabel.text = "Breed: \(tiger.breed)"
         self.factLabel.text = tiger.randomFact()
+        
       } else if self.currentAnimal.species == "Lion" {
+        
         let lion = self.lions[self.currentAnimal.index]
         self.imageView.image = lion.image
         self.breedLabel.text = lion.subspecies
         self.ageLabel.text = "\(lion.age)"
         self.nameLabel.text = lion.name
+      
       }
+      
       self.factLabel.highlighted = false
+      
       }, completion: {
         (finished: Bool) -> () in
     })
