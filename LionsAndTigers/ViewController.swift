@@ -123,7 +123,7 @@ class ViewController: UIViewController {
     default:
       randomIndex = Int(arc4random_uniform(UInt32(myTigers.count)))
     }
-    self.currentAnimal = ("Lion", randomIndex)
+    self.currentAnimal = (animal, randomIndex)
   }
   
   func updateView() {
