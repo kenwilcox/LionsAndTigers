@@ -78,6 +78,14 @@ class ViewController: UIViewController {
     
     lions += [lion, lioness]
     
+    var lionCub = LionCub()
+    lionCub.age = 1
+    lionCub.name = "Simba"
+    lionCub.image = UIImage(named: "LionCub1.jpg")
+    lionCub.subspecies = "Masai"
+    
+    lionCub.roar()
+    
   }
   
   override func didReceiveMemoryWarning() {
