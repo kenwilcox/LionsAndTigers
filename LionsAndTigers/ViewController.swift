@@ -22,30 +22,9 @@ class ViewController: UIViewController {
   var currentIndex = 0
   var currentAnimal = (species: "Tiger", index: 0)
   
-  func randomTransition() -> UIViewAnimationOptions {
-    var ret = UIViewAnimationOptions.TransitionCrossDissolve
-    
-    // Several different transitions are rather jaring
-    
-    //    let random = Int(arc4random_uniform(UInt32(7)))
-    //
-    //    switch(random) {
-    //    case 0: ret = UIViewAnimationOptions.TransitionFlipFromLeft
-    //    case 1: ret = UIViewAnimationOptions.TransitionFlipFromRight
-    //    case 2: ret = UIViewAnimationOptions.TransitionCurlUp
-    //    case 3: ret = UIViewAnimationOptions.TransitionCurlDown
-    //    case 4: ret = UIViewAnimationOptions.TransitionCrossDissolve
-    //    case 5: ret = UIViewAnimationOptions.TransitionFlipFromTop
-    //    case 6: ret = UIViewAnimationOptions.TransitionFlipFromBottom
-    //    default: println("Default Called \(random)"); ret = UIViewAnimationOptions.TransitionCrossDissolve
-    //    }
-    
-    return ret
-  }
-  
   func displayTiger(tiger:Tiger, withTransition: Bool) {
     if (withTransition) {
-      UIView.transitionWithView(self.view, duration: 1, options: randomTransition(), animations: {
+      UIView.transitionWithView(self.view, duration: 1, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
         self.imageView.image = tiger.image
         self.nameLabel.text = "Name: \(tiger.name)"
         self.ageLabel.text = "Age: \(tiger.age)"
